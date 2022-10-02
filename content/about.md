@@ -2,7 +2,7 @@
 title: "About"
 date: 2022-09-24T15:09:25+07:00
 draft: false
-
+layout: staticpage
 
 ---
 

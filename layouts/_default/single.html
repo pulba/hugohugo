@@ -1,11 +1,11 @@
 {{ define "main" }}
 <main>
-    <section class="page-title | py-7">
+    <section class="py-7">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="text-center">
-                        <h1 class="text-center mw-none position-relative mb-0 pb-3">{{.Title}}</h1>
+                    <div class="page-title text-center">
+                        <h1 class="text-center mw-none relative mb-0 pb-3">{{.Title}}</h1>
                     </div>
                 </div>
             </div>
@@ -15,7 +15,9 @@
         <div class="sb__single | container">
             <div class="row">
                 <div class="col-8">
-                    <img src="{{.Params.image}}" style="width:500px; height:300px" alt="">
+                    <div class="image__single d-block ratio ratio-16x9">
+                        <img src="{{.Params.image}}" alt="">
+                    </div>
                     <ul class="d-flex sx-3 py-3">
                         <span class="fw-bold">Tags:</span>
                         {{ range (.GetTerms "tags") }}

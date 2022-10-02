@@ -2,6 +2,8 @@
 title: "Contact"
 date: 2022-09-24T15:09:45+07:00
 draft: false
+layout: staticpage
+
 ---
 
 

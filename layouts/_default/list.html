@@ -3,15 +3,15 @@
     <header class="py-5">
         <h1 class="var__title text-center mw-none pb-4 relative">{{.Title}}</h1>
     </header>
-    <section class="">
+    <section class="content__list">
         <div class="container">
-            <div class="row">
-                <div class="col-8">
-                    <div class="row">
+            <div class="row__list | row">
+                <div class="col-12 col-lg-8 col-md-12">
+                    <div class="cc__list | row">
                         {{ range .Paginator.Pages }}
-                        <div class="colums__tumbnail col-lg-6 col-md-6 mb-5" style="width: 25rem;">
+                        <div class="colums__tumbnail | col-12 col-sm-6 col-md-6 col-lg-6 mb-5">
                             <div class="ct__thumbnail">
-                                <a href="{{ .Permalink }}">
+                                <a class="d-block ratio ratio-4x3" href="{{ .Permalink }}">
                                     <img src="{{.Params.image }}" class="img-fluid" alt="">
                                 </a>
                             </div>
@@ -24,8 +24,9 @@
                         </div>
                         {{ end }}
                     </div>
+                    {{ template "_internal/pagination.html" . }}
                 </div>
-                <div class="content-sidebar col-4">
+                <div class="content-sidebar | col-12 col-lg-4">
                     {{ partial "sidebar.html" . }}
                 </div>
             </div>
