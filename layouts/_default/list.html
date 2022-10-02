@@ -19,7 +19,7 @@
                                 <h5 class="pt-4 pb-3"><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
                                 <p class="pb-2">{{ .Summary }}</p>
                                 <span>{{ .Params.authors }}</span>
-                                <span> || {{ .Date | time.Format ":date_long" }} </span>
+                                <span> || {{ .Params.date.Format .Site.Params.dateFormat }}</span>
                             </div>
                         </div>
                         {{ end }}

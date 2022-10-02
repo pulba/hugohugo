@@ -7,3 +7,5 @@ custom_css = ["css/custom.css"]
 [taxonomies]
     tag = "tags"
     category = "categories"
+[params]
+    dateFormat = "02 Jan 2006"
