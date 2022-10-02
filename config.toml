@@ -1,4 +1,4 @@
-baseURL= 'http://example.org/'
+baseURL= 'http://hugohugi.pulba.eu.org/'
 languageCode= 'en-us'
 title= 'Bee Hugo Theme'
 summarylength = 20
