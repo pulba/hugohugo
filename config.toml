@@ -1,0 +1,9 @@
+baseURL= 'http://example.org/'
+languageCode= 'en-us'
+title= 'Bee Hugo Theme'
+summarylength = 20
+paginate = 6
+custom_css = ["css/custom.css"]
+[taxonomies]
+    tag = "tags"
+    category = "categories"

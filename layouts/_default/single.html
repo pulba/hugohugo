@@ -1,0 +1,36 @@
+{{ define "main" }}
+<main>
+    <section class="page-title | py-7">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-center">
+                        <h1 class="text-center mw-none position-relative mb-0 pb-3">{{.Title}}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="single__blog | pb-7">
+        <div class="sb__single | container">
+            <div class="row">
+                <div class="col-8">
+                    <img src="{{.Params.image}}" style="width:500px; height:300px" alt="">
+                    <ul class="d-flex sx-3 py-3">
+                        <span class="fw-bold">Tags:</span>
+                        {{ range (.GetTerms "tags") }}
+                        <li class=""><a href="{{ .Permalink }}">{{ .LinkTitle }}</a>,</li>
+                        {{ end }}
+                    </ul>
+                    {{.Content}}
+                    <h6 class="author__single | my-4"><a href="{{ .Permalink }}">{{ .Params.authors }}</a></h6>
+                    <span class="text-end">{{ .Date | time.Format ":date_long" }} </span>
+                </div>
+                <div class="content-sidebar col-4">
+                    {{ partial "sidebar.html" . }}
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{{ end }}

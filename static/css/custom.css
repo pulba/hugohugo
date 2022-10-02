@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+.container p {
+    max-width: none;
+}
+.container h3 {
+    max-width: none;
+}
+.var__title:after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    margin-left: -25px;
+    background: #f44336;
+}
+
+.middle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  transition: all 1s ease;
+  transform: translate(100%,100%);
+}
+.colums__tumbnail:hover .middle {
+  transform: translate(0);
+  }
+  .text {
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .author__single {
+    position: relative;
+    width: 100%;
+  }
+  .author__single:before {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    width: 40px;
+    height: 2px;
+    background: #f44336;
+}
+#all-categories a {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-title h1:after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  margin-left: -25px;
+  background: #f44336;
+}
+#sidebar .latest__post .Latest__title:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 2px;
+  background: #000;
+}

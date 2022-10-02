@@ -1,0 +1,26 @@
+{{ define "main" }}
+<main class="py-7">
+    <div class="container">
+        <div class="py-7 sy-3">
+            <h1 class="">I must explain to you</h1>
+            <p class="pb-5 mb-7" style="max-width: 60ch;">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system</p>
+        </div>
+        <div class="row flex-center relative">
+            {{ range .Paginator.Pages }}
+                <div class="col-lg-4 col-md-6 mb-5 relative">
+                    <div class="inner-box | relative">
+                        <div class="colums__tumbnail | relative" style="overflow: hidden;">
+                            <a class="d-block ratio ratio-4x3" href="{{ .Permalink }}">
+                                <img src="{{.Params.image }}" class="img-fluid w-100 d-block" alt=""  style="transition: all .3s ease;">
+                            </a>
+                            <div class="middle">
+                                <h6 class="text | pt-4 pb-3"><a href="{{ .Permalink }}">{{ .Title }}</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+        </div>
+    </div>
+</main>
+{{ end }}
